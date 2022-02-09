@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Courses\CrashcourseController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
 /*
@@ -18,6 +19,9 @@ use App\Http\Controllers\HomeController;
 // });
 
 
+
+Route::get('/crashcours/signup', [CrashcourseController::class, 'signup'])->name('crash.signup');
+Route::get('/free/crypto_crashcourse', [CrashcourseController::class, 'takeCourse'])->name('crash.take');
 
 Route::get('/', [HomeController::class, 'home'])->name('home');
 
