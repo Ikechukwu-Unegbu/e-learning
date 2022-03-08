@@ -1,0 +1,55 @@
+/* main{
+  background-color: red;
+} */
+
+.details{
+  display: flex;
+  justify-content:space-between;
+}
+
+.course_left{
+  width: 60%;
+} 
+.course_right{
+width: 30%;
+padding-top: 5.2rem;
+padding-left: 5rem;
+}
+
+.course_left img{
+  width: 100%;
+}
+
+.title{
+  font-size: larger;
+  font-weight: bolder;
+}
+
+#playing{
+  color: #B40000;
+}
+.d-md-flex{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  /* align-items: center; */
+  grid-gap: 8rem;
+}
+.reactangle{
+  /* height:7rem;
+  width:7rem; */
+  display: flex;
+  flex-direction: row;
+  grid-gap: 1.3rem;
+  width: 100%;
+  box-shadow: 0 0 5px gray;
+  padding: .5rem;
+
+  border-radius: 5px;
+  margin-bottom: 1rem;
+}
+
+.reactangle img{
+  width:6rem;
+  height: 6rem;
+  } 

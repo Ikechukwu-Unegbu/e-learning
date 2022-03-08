@@ -21,7 +21,7 @@ use App\Http\Controllers\HomeController;
 
 
 Route::get('/crashcours/signup', [CrashcourseController::class, 'signup'])->name('crash.signup');
-Route::get('/free/crypto_crashcourse', [CrashcourseController::class, 'takeCourse'])->name('crash.take');
+Route::get('/free/course', [CrashcourseController::class, 'takeCourse'])->name('crash.take');
 
 Route::get('/', [HomeController::class, 'home'])->name('home');
 
@@ -30,3 +30,4 @@ Route::get('/dashboard', function () {
 })->middleware(['auth'])->name('dashboard');
 
 require __DIR__.'/auth.php';
+require __DIR__.'/panel.php';

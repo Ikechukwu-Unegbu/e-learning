@@ -1,0 +1,48 @@
+.reg-body{
+  display: flex;
+}
+
+.reg-body-left{
+  background-color: #152A63;
+  width: 45%;
+  height: 100vh;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white !important;
+  padding: 1rem;
+}
+
+.reg-body-right{
+  width: 55%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.reg-body-right form{
+  width: 80%;
+}
+
+.btn{
+  width: 100% !important;
+  background-color: #152A63 !important;
+  color: white !important;
+  margin-top: 1.3rem;
+  font-weight: bold;
+}
+
+@media(max-width:700px){
+  .reg-body-left{
+    display: none;
+  }
+  .reg-body-right{
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+  }
+  .reg-body-right form{
+    width: 80%;
+  }
+}
