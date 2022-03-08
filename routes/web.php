@@ -1,8 +1,10 @@
 <?php
 
 use App\Http\Controllers\Courses\CrashcourseController;
+
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\Auth\RegisteredUserController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -20,14 +22,15 @@ use App\Http\Controllers\HomeController;
 
 
 
-Route::get('/crashcours/signup', [CrashcourseController::class, 'signup'])->name('crash.signup');
+Route::get('/signup', [CrashcourseController::class, 'signup'])->name('crash.signup');
+Route::post('/signup', [RegisteredUserController::class, 'store']);
 Route::get('/free/course', [CrashcourseController::class, 'takeCourse'])->name('crash.take');
 
 Route::get('/', [HomeController::class, 'home'])->name('home');
 
-Route::get('/dashboard', function () {
-    return view('dashboard');
-})->middleware(['auth'])->name('dashboard');
+// Route::get('/dashboard', function () {
+//     return view('dashboard');
+// })->middleware(['auth'])->name('dashboard');
 
 require __DIR__.'/auth.php';
 require __DIR__.'/panel.php';

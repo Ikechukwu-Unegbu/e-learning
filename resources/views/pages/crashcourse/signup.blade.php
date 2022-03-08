@@ -13,7 +13,7 @@
     </div>
     <div class="reg-body-right">
       <div class="container">
-        <form action="{{ route('register') }}" class="reg-form">
+        <form action="/signup" class="reg-form" method="POST">
           @csrf 
           <div class="form-group">
             <h4>Sign up and Get Started</h4>
@@ -22,6 +22,7 @@
             <label for="" class="form-label">Name</label>
             <input type="text" name="name" class="form-control">
           </div>
+          <input type="text" value="crash" style="display:none">
           <div class="form-group">
             <label for="" class="form-label">Telegram</label>
             <input type="text" name="telegram" class="form-control">

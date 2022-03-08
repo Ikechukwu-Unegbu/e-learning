@@ -1,7 +1,6 @@
 <?php 
-use App\Models\Dashboard\PagesController;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\Dashboard\DashpagesController;
 
-
-Route::get('/panel', [PagesController::class, 'adminHome'])->name('panel');
-Route::get('panel/users', [PagesController::class, ''])->name('panel.users');
+Route::get('/panel', [DashpagesController::class, 'adminHome'])->name('panel')->middleware(['auth']);
+Route::get('/panel/users', [DashpagesController::class, 'adminUser'])->name('panel.users')->middleware(['auth']);

@@ -10,6 +10,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Validation\Rules;
+use phpDocumentor\Reflection\DocBlock\Tags\Var_;
 
 class RegisteredUserController extends Controller
 {
@@ -33,17 +34,26 @@ class RegisteredUserController extends Controller
      */
     public function store(Request $request)
     {
+        var_dump($request->all());
+        var_dump($request->path());
+        die();
         $request->validate([
             'name' => ['required', 'string', 'max:255'],
             'telegram'=>['required', 'string'],
             'email' => ['required', 'string', 'email', 'max:255', 'unique:users'],
             'password' => ['required', 'confirmed', Rules\Password::defaults()],
         ]);
-
+        $usertype = '';
+        if($request->path() == 'signup'){
+            $usertype = 'crash';
+        }else{
+            $usertype= 'learner';
+        }
         $user = User::create([
             'name' => $request->name,
             'email' => $request->email,
             'telegram'=>$request->telegram,
+            'usertype'=>$usertype,
             'password' => Hash::make($request->password),
         ]);
 
@@ -51,6 +61,10 @@ class RegisteredUserController extends Controller
 
         Auth::login($user);
 
-        return redirect()->route('crash.take');
+        if($request->path() == 'signup'){
+            return redirect()->route('crash.take');
+        }else{
+            return redirect()->route('panel');
+        }
     }
 }
