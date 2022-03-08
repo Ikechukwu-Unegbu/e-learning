@@ -34,9 +34,9 @@ class RegisteredUserController extends Controller
      */
     public function store(Request $request)
     {
-        var_dump($request->all());
-        var_dump($request->path());
-        die();
+        // var_dump($request->all());
+        // var_dump($request->path());
+        // die();
         $request->validate([
             'name' => ['required', 'string', 'max:255'],
             'telegram'=>['required', 'string'],

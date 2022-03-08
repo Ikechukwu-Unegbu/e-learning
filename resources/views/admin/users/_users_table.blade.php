@@ -1,32 +1,33 @@
 <div>
-  <h3>Registered Users</h3>
+  <h3 class="mt-4">Registered Users</h3>
+  <div class="">
+    <a href="/panel/users/comments" style="float: right;" class="btn btn-primary">Comments</a>
+  </div>
 <table class="table">
   <thead>
     <tr>
-      <th scope="col">#</th>
-      <th scope="col">First</th>
-      <th scope="col">Last</th>
-      <th scope="col">Handle</th>
+      <th scope="col">id</th>
+      <th scope="col">name</th>
+      <th scope="col">telegram</th>
+      <th scope="col">actions</th>
+      <!-- <th scope="col">actions</th> -->
     </tr>
   </thead>
-  <tbody>
+  <tbody>    
+    @foreach($users as $user)
     <tr>
-      <th scope="row">1</th>
-      <td>Mark</td>
-      <td>Otto</td>
-      <td>@mdo</td>
+      <th scope="row">{{$user->id}}</th>
+      <td >{{$user->name}}</td>
+      <td>{{$user->telegram}}</td>
+      <td>
+        <a href="" class="btn">delete</a> |
+        <a href="" class="btn">edit</a>
+      </td>
     </tr>
-    <tr>
-      <th scope="row">2</th>
-      <td>Jacob</td>
-      <td>Thornton</td>
-      <td>@fat</td>
-    </tr>
-    <tr>
-      <th scope="row">3</th>
-      <td colspan="2">Larry the Bird</td>
-      <td>@twitter</td>
-    </tr>
+    @endforeach
+    <div class="">
+      {{$users->links()}}
+    </div>
   </tbody>
 </table>
 </div>

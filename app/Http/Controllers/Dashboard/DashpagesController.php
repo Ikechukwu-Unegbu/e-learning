@@ -14,7 +14,8 @@ class DashpagesController extends Controller
 
     public function adminUser(){
 
-        $user = User::where('usertype', '=', 'crash')->paginate(12);
-        return view('admin.users.users');
+        $users = User::where('usertype', '=', 'crash')->paginate(12);
+        // var_dump($user);die();
+        return view('admin.users.users')->with('users', $users);
     }
 }
