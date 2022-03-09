@@ -5,6 +5,8 @@ use App\Http\Controllers\Courses\CrashcourseController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\Auth\RegisteredUserController;
+use App\Http\Controllers\interactions\CommentsController;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -25,7 +27,7 @@ use App\Http\Controllers\Auth\RegisteredUserController;
 Route::get('/signup', [CrashcourseController::class, 'signup'])->name('crash.signup');
 Route::post('/signup', [RegisteredUserController::class, 'store']);
 Route::get('/free/course', [CrashcourseController::class, 'takeCourse'])->name('crash.take');
-
+Route::post('/comment', [CommentsController::class, 'comment'])->middleware(['auth'])->name('comment');
 Route::get('/', [HomeController::class, 'home'])->name('home');
 
 // Route::get('/dashboard', function () {

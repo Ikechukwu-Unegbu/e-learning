@@ -25,11 +25,42 @@
       </div>
 
       <div class="leave_comment mt-4">
-        <form class="form" action="" method="POST">
+        <form class="form" action="/comment" method="POST">
+          @csrf
           <h4>Leave a Comment</h4>
           <textarea class="input textarea form-control comment" name="comment" id="" cols="30" rows="10"></textarea>
           <button type="submit" class="btn btn-primary">Send</button>
         </form>
+        <div class="mt-4">
+          <h5>Comments</h5>
+          <div class="">
+            @foreach($userComments as $userComment)
+              <div class="">
+                <p>{!!$userComment->comment!!}</p>
+                <small>
+                  <span>By: </span> <span>{!!$userComment->user->name!!}</span> |
+                  <span>at: </span> <span>{!!$userComment->created_at!!}</span> |
+                  <span><a href="" class="">Delete</a></span>
+                </small> 
+              </div>
+            @endforeach 
+          </div>
+          <div class="">
+            @foreach($publicComms as $publicComm)
+              <div class="">
+                <p>{!!$publicComm->comment!!}</p>
+                <small>
+                  <span>By: </span> <span>{!!$publicComm->user->name!!}</span> |
+                  <span>at: </span> <span>{!!$publicComm->created_at!!}</span> |
+                  <span><a href="" class="">Delete</a></span>
+                </small> 
+              </div>
+            @endforeach 
+          </div>
+          <div>
+
+          </div>
+        </div>
       </div>
     </div>
     <!-- The right hand side starts -->

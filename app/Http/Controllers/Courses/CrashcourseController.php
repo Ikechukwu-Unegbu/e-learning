@@ -7,6 +7,9 @@ use App\Models\Courses\Crashcourses;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Session;
 use Illuminate\Support\Facades\Validator;
+use App\Models\interactions\Comment;
+use App\Models\User;
+use Illuminate\Support\Facades\Auth;
 
 class CrashcourseController extends Controller
 {
@@ -33,6 +36,18 @@ class CrashcourseController extends Controller
     }
 
     public function takeCourse(){
-        return view('pages.crashcourse.course');
+        // $users = User::where('usertype', '=', 'crash')->paginate(12);
+        $userComments = Comment::where('user_id', '=', Auth::user()->id)->get();
+        // var_dump($userComments);die();
+        $publicComms = Comment::where('mode' , '=', 'public')->paginate(5);
+        // return view('admin.users.users')
+        foreach($publicComms as $publicComm){
+            if($publicComm->user_id === Auth::user()->id){
+                $publicComm = '';
+            }
+        }
+        return view('pages.crashcourse.course')
+            ->with('userComments', $userComments)
+            ->with('publicComms', $publicComms);
     }
 }
