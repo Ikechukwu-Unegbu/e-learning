@@ -36,7 +36,7 @@ class CrashcourseController extends Controller
     }
 
     public function takeCourse(){
-        // $users = User::where('usertype', '=', 'crash')->paginate(12);
+        $users = User::where('usertype', '=', 'crash')->paginate(12);
         $userComments = Comment::where('user_id', '=', Auth::user()->id)->get();
         // var_dump($userComments);die();
         $publicComms = Comment::where('mode' , '=', 'public')->paginate(5);
@@ -50,4 +50,10 @@ class CrashcourseController extends Controller
             ->with('userComments', $userComments)
             ->with('publicComms', $publicComms);
     }
+
+    public function logincreate(){
+        return view('pages.crashcourse.login');
+    }
+
+    
 }

@@ -38,21 +38,25 @@
               <div class="">
                 <p>{!!$userComment->comment!!}</p>
                 <small>
-                  <span>By: </span> <span>{!!$userComment->user->name!!}</span> |
-                  <span>at: </span> <span>{!!$userComment->created_at!!}</span> |
-                  <span><a href="" class="">Delete</a></span>
+                  <span>By: </span> <span><b>{!!$userComment->user->name!!}</b></span> |
+                  <span>at: </span> <span><b>{!!$userComment->created_at!!}</b></span> |
+                  <span><a href="" class=""><b>Delete</b></a></span>
                 </small> 
               </div>
             @endforeach 
           </div>
+          <br>
+          <br>
           <div class="">
             @foreach($publicComms as $publicComm)
               <div class="">
                 <p>{!!$publicComm->comment!!}</p>
                 <small>
-                  <span>By: </span> <span>{!!$publicComm->user->name!!}</span> |
-                  <span>at: </span> <span>{!!$publicComm->created_at!!}</span> |
+                  <span>By: </span> <span><b>{!!$publicComm->user->name!!}</b></span> |
+                  <span>at: </span> <span><b>{!!$publicComm->created_at!!}</b></span> |
+                  @if($publicComm->user->id == @Auth::user()->id)
                   <span><a href="" class="">Delete</a></span>
+                  @endif
                 </small> 
               </div>
             @endforeach 

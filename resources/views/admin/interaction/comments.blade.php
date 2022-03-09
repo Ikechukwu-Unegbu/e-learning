@@ -15,10 +15,13 @@
         <div class="">
           {!!$comment->comment!!}
           <br/>
-          <span>by: </span><span>{{$comment->user->name}}</span>
+          <span>by: </span><span><b>{{$comment->user->name}}</b></span>
         </div>
         <div class="">
-          <span class="badge bg-secondary">{{$comment->mode}}</span> <a href="" class="btn btn-sm btn-success">Publish</a>  <a href="" class="btn btn-sm btn-danger">Delete</a>
+          <span class="badge bg-secondary">{{$comment->mode}}</span> <a href="{{route('comment.publish', [$comment->id])}}" class="btn btn-sm btn-success">Publish</a>  <a href="" class="btn btn-sm btn-danger">Delete</a>
+          @if($comment->mode == 'public')
+            <span><a href="" class="btn btn-sm btn-danger">Unpublish</a></span>
+          @endif
         </div>
       </div>
     @endforeach

@@ -16,9 +16,9 @@
         <form action="/signup" class="reg-form" method="POST">
           @csrf 
           <div class="form-group">
-            <h4>Sign up and Get Started</h4>
+            <h4>Login</h4>
           </div>
-          <div class="form-group">
+          <!-- <div class="form-group">
             <label for="" class="form-label">Name</label>
             <input type="text" name="name" class="form-control">
           </div>
@@ -26,7 +26,7 @@
           <div class="form-group">
             <label for="" class="form-label">Telegram</label>
             <input type="text" name="telegram" class="form-control">
-          </div>
+          </div> -->
           <div class="form-group">
             <label for="" class="form-label">Email</label>
             <input type="text" name="email" class="form-control">
@@ -35,12 +35,12 @@
             <label for="" class="form-label">Password</label>
             <input type="text" name="password" class="form-control">
           </div>
-          <div class="form-group">
+          <!-- <div class="form-group">
             <label for="" class="form-label">Confirm Password</label>
             <input type="text" class="form-control" name="password_confirmation">
-          </div>
+          </div> -->
           <div class="form-group">
-            <button type="submit" class="btn">Submit</button>
+            <button class="btn">Login</button>
           </div>
         </form>
       </div>

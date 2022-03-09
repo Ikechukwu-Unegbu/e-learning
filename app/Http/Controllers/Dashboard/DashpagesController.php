@@ -30,4 +30,11 @@ class DashpagesController extends Controller
         return view('admin.interaction.comments')
                 ->with('comments', $comments);
     }
+
+    public function publishComment($id){
+        $comments = Comment::find($id)->first();
+        $comments->mode = 'public';
+        $comments->save();
+        return redirect()->route('comment');
+    }
 }

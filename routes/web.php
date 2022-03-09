@@ -27,12 +27,9 @@ use App\Http\Controllers\interactions\CommentsController;
 Route::get('/signup', [CrashcourseController::class, 'signup'])->name('crash.signup');
 Route::post('/signup', [RegisteredUserController::class, 'store']);
 Route::get('/free/course', [CrashcourseController::class, 'takeCourse'])->name('crash.take');
-Route::post('/comment', [CommentsController::class, 'comment'])->middleware(['auth'])->name('comment');
+Route::post('/comment', [CommentsController::class, 'comment'])->name('comment')->middleware(['auth']);
 Route::get('/', [HomeController::class, 'home'])->name('home');
-
-// Route::get('/dashboard', function () {
-//     return view('dashboard');
-// })->middleware(['auth'])->name('dashboard');
+Route::get('/login_', [CrashcourseController::class, 'logincreate']);
 
 require __DIR__.'/auth.php';
 require __DIR__.'/panel.php';
