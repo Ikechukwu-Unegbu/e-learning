@@ -39,8 +39,13 @@ class CrashcourseController extends Controller
         $users = User::where('usertype', '=', 'crash')->paginate(12);
         $userComments = Comment::where('user_id', '=', Auth::user()->id)->get();
         // var_dump($userComments);die();
-        $publicComms = Comment::where('mode' , '=', 'public')->paginate(5);
+        $publicComms = Comment::where('mode', '=', 'public')->get();
         // return view('admin.users.users')
+        // var_dump($publicComms);
+        // foreach($publicComms as $com){
+        //     var_dump($com->id);
+        // }
+        // die();
         foreach($publicComms as $publicComm){
             if($publicComm->user_id === Auth::user()->id){
                 $publicComm = '';

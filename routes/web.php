@@ -31,5 +31,6 @@ Route::post('/comment', [CommentsController::class, 'comment'])->name('comment')
 Route::get('/', [HomeController::class, 'home'])->name('home');
 Route::get('/login_', [CrashcourseController::class, 'logincreate']);
 
+
 require __DIR__.'/auth.php';
 require __DIR__.'/panel.php';

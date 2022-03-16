@@ -7,6 +7,8 @@ use App\Models\interactions\Comment;
 use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use App\Models\Role;
+use Illuminate\Support\Facades\Session;
 
 class DashpagesController extends Controller
 {
@@ -32,9 +34,31 @@ class DashpagesController extends Controller
     }
 
     public function publishComment($id){
-        $comments = Comment::find($id)->first();
+        $comments = Comment::find($id);
         $comments->mode = 'public';
+        // var_dump($comments->mode);die;
         $comments->save();
         return redirect()->route('comment');
+    }
+
+    public function roles(){
+        $roles = Role::paginate(12);
+        return view('admin.role.index')->with('roles', $roles);
+    }
+
+    public function newrole(Request $request){
+        // var_dump($request->all());die;
+        $request->validate([
+            'name'=>'required|string',
+            'description'=>'required|string'
+        ]);
+        $role = new Role();
+        $role->name = $request->input('name');
+        $role->description = $request->input('description');
+        $role->save();
+
+        Session::flash('success', 'New Role Created.');
+
+        return redirect()->route('role.index');
     }
 }
