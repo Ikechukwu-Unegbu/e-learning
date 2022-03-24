@@ -13,15 +13,14 @@
   <div class="container course-holder">
     <div class="course_left">
       <h2>Introduction to Blockchain Technology and Crypto Trading</h2>
-      
       <video width="320" height="240" controls>
-        <source src="{{asset('image/videos/4. Fundamental Analysis.mp4')}}" type="video/mp4">
+        <source src="{{asset('image/videos/1. Introduction to Blockchain Technology.mp4')}}" type="video/mp4">
         <!-- <source src="movie.ogg" type="video/ogg"> -->
         Your browser does not support the video tag.
       </video>
       <div class="details">
         <div class="title">
-          <span id="playing">Playing Now:</span> <span id="current_play">Fundamental Analysis</span>
+          <span id="playing">Playing Now:</span> <span id="current_play">Exchange Market</span>
         </div>
         <div class="buttons">
           <button class="btn"><i class="fa-solid fa-thumbs-up"></i></button>
