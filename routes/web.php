@@ -6,6 +6,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\Auth\RegisteredUserController;
 use App\Http\Controllers\interactions\CommentsController;
+use App\Http\Controllers\RoutingController;
 
 /*
 |--------------------------------------------------------------------------
@@ -26,10 +27,21 @@ use App\Http\Controllers\interactions\CommentsController;
 
 Route::get('/signup', [CrashcourseController::class, 'signup'])->name('crash.signup');
 Route::post('/signup', [RegisteredUserController::class, 'store']);
-Route::get('/free/course', [CrashcourseController::class, 'takeCourse'])->name('crash.take');
+Route::get('/free/course', [CrashcourseController::class, 'takeCourse'])->name('crash.take')->middleware(['auth']);
 Route::post('/comment', [CommentsController::class, 'comment'])->name('comment')->middleware(['auth']);
 Route::get('/', [HomeController::class, 'home'])->name('home');
 Route::get('/login_', [CrashcourseController::class, 'logincreate']);
+
+/**
+ * 
+ *COURSE ROUTES 
+ */
+Route::get('free/introduction-to-blockchain-technology/lession_two', 
+[RoutingController::class, 'intr_to_blockchain'])->name('intro.bc')->middleware(['auth']);
+
+Route::get('/')->name('types.bc')->middleware(['auth']);
+
+
 
 
 require __DIR__.'/auth.php';
