@@ -13,7 +13,7 @@
     </div>
     <div class="reg-body-right">
       <div class="container">
-        <form action="/signup" class="reg-form" method="POST">
+        <form action="/login" class="reg-form" method="POST">
           @csrf 
           <div class="form-group">
             <h4>Login</h4>

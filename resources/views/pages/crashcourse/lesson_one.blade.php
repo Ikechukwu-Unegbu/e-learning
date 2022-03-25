@@ -20,7 +20,7 @@
       </video>
       <div class="details">
         <div class="title">
-          <span id="playing">Playing Now:</span> <span id="current_play">Exchange Market</span>
+          <span id="playing">Playing Now:</span> <span id="current_play">Introduction to Blockchain Technology</span>
         </div>
         <div class="buttons">
           <button class="btn"><i class="fa-solid fa-thumbs-up"></i></button>

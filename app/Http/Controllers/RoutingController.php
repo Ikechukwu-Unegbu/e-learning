@@ -9,7 +9,11 @@ use Illuminate\Support\Facades\Auth;
 
 class RoutingController extends Controller
 {
-    public function intr_to_blockchain($blade){
+    public function intr_to_blockchain(Request $request){
+        $path = explode('/',$request->path());
+        $blade = end($path);
+        // var_dump($blade);die();
+
         $users = User::where('usertype', '=', 'crash')->paginate(12);
         $userComments = Comment::where('user_id', '=', Auth::user()->id)->get();
         // var_dump($userComments);die();
@@ -20,7 +24,7 @@ class RoutingController extends Controller
                 $publicComm = '';
             }
         }
-        return view('pages.crashcourse.'.$blade)
+        return view('pages.crashcourse/'.$blade)
             ->with('userComments', $userComments)
             ->with('publicComms', $publicComms);
     }
