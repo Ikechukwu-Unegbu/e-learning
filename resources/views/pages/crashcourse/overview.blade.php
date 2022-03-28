@@ -1,7 +1,8 @@
 @extends('layouts.elearningLayout')
 
 @section('head')
-<link rel="stylesheet" href="{{ asset('css/crashcourse/crashindex.css')}}">
+<link rel="stylesheet" href="{{asset('css/crashcourse/crashindex.css  crashIndex.css')}}">
+<link rel="stylesheet" href="{{asset('css/crashcourse/signup.css')}}">
 @endsection
 
 
