@@ -30,6 +30,9 @@
           </a>
           <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
             <li><a class="dropdown-item" href="/logout">logout as {{Auth::user()->name}}</a></li>
+            @if(Auth::user()->role == 'admin')
+            <li><a class="dropdown-item" href="/panel">Admin Panel</a></li>
+            @endif
             <!-- <li><a class="dropdown-item" href="#">Another action</a></li>
             <li><a class="dropdown-item" href="#">Something else here</a></li> -->
           </ul>

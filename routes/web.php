@@ -26,7 +26,7 @@ use App\Http\Controllers\RoutingController;
 
 
 Route::get('/signup', [CrashcourseController::class, 'signup'])->name('crash.signup');
-Route::post('/signup', [RegisteredUserController::class, 'store']);
+Route::post('/signup', [RegisteredUserController::class, 'storeSignup']);
 Route::get('/free/course', [CrashcourseController::class, 'takeCourse'])->name('crash.take')->middleware(['auth']);
 Route::post('/comment', [CommentsController::class, 'comment'])->name('comment')->middleware(['auth']);
 Route::get('/', [HomeController::class, 'home'])->name('home');

@@ -9,10 +9,15 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use App\Models\Role;
 use Illuminate\Support\Facades\Session;
+use Illuminate\Support\Facades\Gate;
 
 class DashpagesController extends Controller
 {
     public function adminHome(){
+        $user = User::find(Auth::user()->id);
+        if (! Gate::allows('admin', $user)) {
+            abort(403);
+        }
         return view('admin.home.home');
     }
 

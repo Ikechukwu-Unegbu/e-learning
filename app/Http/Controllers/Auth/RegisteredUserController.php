@@ -21,7 +21,7 @@ class RegisteredUserController extends Controller
      */
     public function create()
     {
-        return view('auth.register');
+        return view('auth.crashregister');
     }
 
     /**
@@ -61,10 +61,10 @@ class RegisteredUserController extends Controller
 
         Auth::login($user);
 
-        if($request->path() == 'signup'){
+        // if($request->path() == 'signup'){
             return redirect()->route('crash.take');
-        }else{
-            return redirect()->route('panel');
-        }
+        // }else{
+        //     return redirect()->route('panel');
+        // }
     }
 }

@@ -18,6 +18,7 @@ class CrashcourseController extends Controller
     }
 
     public function storeSignup(Request $request){
+        
         $validate = $request->validate([
             'name'=>'required|string|max:24',
             'email'=>'required|string|',
