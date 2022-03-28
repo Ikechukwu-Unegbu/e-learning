@@ -13,14 +13,14 @@
   <div class="container course-holder">
     <div class="course_left">
       <h2>Introduction to Blockchain Technology and Crypto Trading</h2>
-      <!-- <video width="320" height="240" controls>
+      <video width="320" height="240" controls>
         <source src="{{asset('image/videos/10. Introduction to Future.mp4')}}" type="video/mp4">
-        <!-- <source src="movie.ogg" type="video/ogg"> -->
+    
         Your browser does not support the video tag.
-      </video> -->
+      </video>
       <div class="details">
         <div class="title">
-          <span id="playing">Playing Now:</span> <span id="current_play">Lorem ipsum dolor sit amet consectetur.</span>
+          <span id="playing">Playing Now:</span> <span id="current_play">Introduction to Future</span>
         </div>
         <div class="buttons">
           <button class="btn"><i class="fa-solid fa-thumbs-up"></i></button>

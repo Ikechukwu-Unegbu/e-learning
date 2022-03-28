@@ -92,7 +92,7 @@ Route::get('free/decentralized_exchange/lesson_thirteen',
 Route::get('free/decentralized_exchange/lesson_fourteen', 
 [RoutingController::class, 'intr_to_blockchain'])->name('decntra2')->middleware(['auth']);
 
-Route::get('free/how_to_use_signal/lesson_fiteen', 
+Route::get('free/how_to_use_signal/lesson_fifteen', 
 [RoutingController::class, 'intr_to_blockchain'])->name('signals')->middleware(['auth']);
 
 Route::get('free/end_note/lesson_sixteen', 

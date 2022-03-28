@@ -71,7 +71,7 @@
 
   <a class="reactangle" href="{{route('signals')}}">
     <img src="https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80"/>
-    <h5>16. Lesson 9: How to use signals to trade</h5>
+    <h5>Lesson 9: How to use signals to trade</h5>
   </a>
 
   <a class="reactangle" href="{{route('end')}}">

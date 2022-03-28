@@ -13,7 +13,7 @@
 <main class="mb-5">
   <div class="container course-holder">
     <div class="course_left">
-      <h2>Introduction to Blockchain Technology and Crypto Trading</h2>
+      <h4>Introduction to Blockchain Technology and Crypto Trading</h4>
       <video width="320" height="240" controls>
         <source src="{{asset('image/videos/Course Overview.mp4')}}" type="video/mp4">
         <!-- <source src="movie.ogg" type="video/ogg"> -->
@@ -21,11 +21,11 @@
       </video>
       <div class="details">
         <div class="title">
-          <span id="playing">Playing Now:</span> <span id="current_play">Lorem ipsum dolor sit amet consectetur.</span>
+          <span id="playing">Playing Now:</span> <span id="current_play">Course Overview</span>
         </div>
         <div class="buttons">
-          <button class="btn"><i class="fa-solid fa-thumbs-up"></i></button>
-          <button class="btn"><i class="fa-solid fa-thumbs-down"></i></button>
+          <!-- <button class="btn"><i class="fa-solid fa-thumbs-up"></i></button>
+          <button class="btn"><i class="fa-solid fa-thumbs-down"></i></button> -->
         </div>
       </div>
       <!-- tabs -->
