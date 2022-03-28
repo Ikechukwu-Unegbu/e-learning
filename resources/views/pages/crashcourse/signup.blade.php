@@ -42,7 +42,7 @@
           </div>
           <div class="mt-3">
             <p>Do you have account already? Log in <a href="/login">here</a></p>
-            <p>Forgot your password? <a href="">Click Here</a></p>
+            <p>Forgot your password? <a href="/forgot-password">Click Here</a></p>
           </div>
           <div class="form-group mt-3">
             <button  class="btn">Submit</button>
