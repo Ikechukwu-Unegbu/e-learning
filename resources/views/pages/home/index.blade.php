@@ -29,6 +29,7 @@
   <link rel="preload" as="style" href="{{asset('image\mobi_assets\mobirise\css\mbr-additional.css')}}" type="text/css">
   <link rel="preload" as="style" href="{{asset('image\mobi_assets\mobirise\css\mbr-additional.css')}}">
   <link rel="stylesheet" href="{{asset('image\mobi_assets\mobirise\css\mbr-additional.css')}}" type="text/css">
+  
   <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">  
    -->
   
@@ -56,7 +57,7 @@
                 <ul class="navbar-nav nav-dropdown" data-app-modern-menu="true"><li class="nav-item"><a class="nav-link link text-black text-primary display-7" href="#top">Home</a></li><li class="nav-item"><a class="nav-link link text-black text-primary display-7" href="index.html#features1-1i">Courses</a></li>
                     <li class="nav-item"><a class="nav-link link text-black text-primary display-7" href="index.html#header14-1j"><span class="socicon socicon-telegram mbr-iconfont mbr-iconfont-btn" style="color: rgb(236, 206, 8);"></span></a></li></ul>
                 
-                <div class="navbar-buttons mbr-section-btn"><a class="btn btn-primary display-4" href="#">Register</a> <a class="btn btn-secondary display-4" href="#">&nbsp;Login&nbsp;</a></div>
+                <div class="navbar-buttons mbr-section-btn"><a class="btn btn-primary display-4" href="/register">Register</a> <a class="btn btn-secondary display-4" href="/login">&nbsp;Login&nbsp;</a></div>
             </div>
         </div>
     </nav>
@@ -78,7 +79,7 @@
                     <h1 class="mbr-section-title mbr-fonts-style mb-3 display-1"><strong>Special Offer</strong></h1>
                     <p class="mbr-text mbr-fonts-style display-7">
                         Digitmoni academy is offering a free online crypto class for blockchain and crypto currency trading. This offer is for a limited time and you can't afford to miss it</p>
-                    <div class="mbr-section-btn mt-3"><a class="btn btn-warning display-4" href="#">&nbsp; Get Started&nbsp; &nbsp;</a>
+                    <div class="mbr-section-btn mt-3"><a class="btn btn-warning display-4" href="/login">&nbsp; Get Started&nbsp; &nbsp;</a>
                         <a class="btn btn-primary display-4" href="#">Join Community</a></div>
                 </div>
             </div>

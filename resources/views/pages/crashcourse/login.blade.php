@@ -40,6 +40,9 @@
             <input type="text" class="form-control" name="password_confirmation">
           </div> -->
           <div class="form-group">
+            <small>
+            <p>Do you have account already? Log in <a href="/login">here</a></p>
+            </small>
             <button class="btn">Login</button>
           </div>
         </form>
