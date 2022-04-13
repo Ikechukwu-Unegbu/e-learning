@@ -23,7 +23,7 @@ class DashpagesController extends Controller
 
     public function adminUser(){
 
-        $users = User::where('usertype', '=', 'crash')->paginate(12);
+        $users = User::paginate(12);
         $userComments = Comment::where('user_id', '=', Auth::user()->id)->first();
         $publicComms = Comment::where('mode' , '=', 'public')->get();
         return view('admin.users.users')
