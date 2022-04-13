@@ -80,7 +80,7 @@
                     <p class="mbr-text mbr-fonts-style display-7">
                         Digitmoni academy is offering a free online crypto class for blockchain and crypto currency trading. This offer is for a limited time and you can't afford to miss it</p>
                     <div class="mbr-section-btn mt-3"><a class="btn btn-warning display-4" href="/login">&nbsp; Get Started&nbsp; &nbsp;</a>
-                        <a class="btn btn-primary display-4" href="#">Join Community</a></div>
+                        <a class="btn btn-primary display-4" href="https://t.me/Digit_moni">Join Community</a></div>
                 </div>
             </div>
         </div>
@@ -154,9 +154,15 @@
             <div class="col-12 col-md">
                 <div class="text-wrapper">
                     <h1 class="mbr-section-title mbr-fonts-style mb-3 display-2">
-                        <strong>About Company</strong></h1>
-                    <p class="mbr-text mbr-fonts-style display-7">Through the e-learning platform, we empower young people with 21st-century tech skills so they can be globally employable. Through the investment app we offer investment and saving packages that guarantee a decent return on investment.<br></p>
-                    <div class="mbr-section-btn mt-3"><a class="btn btn-warning display-4" href="https://digitmoni.com/about">Read More</a> <a class="btn btn-warning display-4" href="https://digitmoni.com/about">Read More</a></div>
+                        <strong>About Us</strong></h1>
+                    <p class="mbr-text mbr-fonts-style display-7">
+                        <p>Digitmoni academy is about everything digital knowledge & skills that would emancipate you from digital illiteracy & poverty.</p> 
+
+                        <p>We offer training in Data analytics , Microsoft & Excel, Data science, Graphics design, UI/UX design, Digital marketing, Animations, Programming & crypto analytics.</p> 
+
+                        <p>Our trainees are now testifying to the financial turn around experienced after taking our courses.</p>
+                       <br></p>
+                    <!-- <div class="mbr-section-btn mt-3"><a class="btn btn-warning display-4" href="https://digitmoni.com/about">Read More</a> <a class="btn btn-warning display-4" href="https://digitmoni.com/about">Read More</a></div> -->
                 </div>
             </div>
         </div>
@@ -235,7 +241,7 @@
     <div class="container">
         <div class="mbr-section-head">
             <h3 class="mbr-section-title mbr-fonts-style align-center mb-0 display-2"><strong>Write Us a Message</strong></h3>
-            <h4 class="mbr-section-subtitle mbr-fonts-style align-center mb-0 mt-2 display-7">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</h4>
+            <h4 class="mbr-section-subtitle mbr-fonts-style align-center mb-0 mt-2 display-7"></h4>
         </div>
         <div class="row justify-content-center mt-4">
             <div class="col-lg-8 mx-auto mbr-form" data-form-type="formoid">
